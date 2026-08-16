@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Physio Buddy",
+    "slug": "physio-buddy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Physio Buddy uses the camera to record short clips of your movement for on-device posture analysis.",
+        "NSMicrophoneUsageDescription": "Physio Buddy records audio along with video clips; audio itself isn't analyzed.",
+        "NSPhotoLibraryUsageDescription": "Physio Buddy can analyze movement clips you already have in your photo library."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Physio Buddy uses the camera to record short clips of your movement for on-device posture analysis.",
+          "microphonePermission": "Physio Buddy records audio along with video clips; audio itself isn't analyzed."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Physio Buddy can analyze movement clips you already have in your photo library."
+        }
+      ]
+    ]
+  }
+}
